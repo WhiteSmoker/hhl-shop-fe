@@ -1,16 +1,12 @@
 import { useEffect, useState } from "react";
 import Checkbox from "./form-builder/checkbox";
 import CheckboxColor from "./form-builder/checkbox-color";
-import Slider from "rc-slider";
 
 // data
-import { getcategoryAPI } from "./../../utils/data/products-types";
+import { useRouter } from "next/router";
 import productsColors from "./../../utils/data/products-colors";
 import productsSizes from "./../../utils/data/products-sizes";
-import { useRouter } from "next/router";
-
-const { createSliderWithTooltip } = Slider;
-const Range = createSliderWithTooltip(Slider.Range);
+import { getcategoryAPI } from "./../../utils/data/products-types";
 
 const ProductsFilter = () => {
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -153,3 +149,4 @@ const ProductsFilter = () => {
 };
 
 export default ProductsFilter;
+

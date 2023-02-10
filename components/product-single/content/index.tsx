@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import CheckboxColorProduct from "../../products-filter/checkbox-color";
 
-import { useDispatch, useSelector } from "react-redux";
 import { some } from "lodash";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import { RootState } from "store";
 import { addProduct } from "store/reducers/cart";
 import { toggleFavProduct } from "store/reducers/user";
-import { ProductType, ProductStoreType } from "types";
-import { RootState } from "store";
-import { toast } from "react-toastify";
+import { ProductStoreType } from "types";
 
 type ProductContent = {
   product: any;
@@ -190,3 +190,4 @@ const Content = ({ product }: ProductContent) => {
 };
 
 export default Content;
+

@@ -4,7 +4,7 @@ type CheckboxColorType = {
   color: string;
   valueName: string;
   changeParam?: any;
-  label: string;
+  label?: string;
 };
 
 const CheckboxColor = ({
@@ -36,3 +36,4 @@ const CheckboxColor = ({
 };
 
 export default CheckboxColor;
+

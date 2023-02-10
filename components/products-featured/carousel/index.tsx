@@ -1,5 +1,4 @@
 import ProductItem from "./../../product-item";
-import { ProductTypeList } from "types";
 
 // import Swiper core and required components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,7 +20,7 @@ if (process.browser) {
 }
 
 type ProductsCarouselType = {
-  products: ProductTypeList[];
+  products: any;
 };
 
 const ProductsCarousel = ({ products }: ProductsCarouselType) => {
@@ -37,17 +36,17 @@ const ProductsCarousel = ({ products }: ProductsCarouselType) => {
         slidesPerView={slidesPerView}
         className="swiper-wrapper"
       >
-        {products.map((item) => (
+        {products?.map((item: any) => (
           <SwiperSlide key={item.id}>
             <ProductItem
-              id={item._id}
+              id={item?._id}
               name={item.name}
               price={item.price}
               color={item.color}
               // discount={item.discount}
               // currentPrice={item.currentPrice}
-              key={item._id}
-              images={item?.image.url}
+              key={item?._id}
+              images={item?.image?.url}
             />
           </SwiperSlide>
         ))}
@@ -57,3 +56,4 @@ const ProductsCarousel = ({ products }: ProductsCarouselType) => {
 };
 
 export default ProductsCarousel;
+

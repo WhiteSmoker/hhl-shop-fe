@@ -6,7 +6,7 @@ type CheckboxType = {
   changeParam: any;
 };
 
-const Checkbox = ({ key, name, label, changeParam, type }: CheckboxType) => {
+const Checkbox = ({ name, label, changeParam, type }: CheckboxType) => {
   return (
     <label
       htmlFor={label + "-" + name}
@@ -25,3 +25,4 @@ const Checkbox = ({ key, name, label, changeParam, type }: CheckboxType) => {
 };
 
 export default Checkbox;
+

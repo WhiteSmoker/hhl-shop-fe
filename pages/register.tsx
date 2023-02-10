@@ -15,13 +15,13 @@ const RegisterPage = () => {
   const router = useRouter();
   const handleRegister = async (data: Register) => {
     try {
-      const res = await RegisterAPI(
+      await RegisterAPI(
         data.username,
         data.email,
         data.password,
         data.phoneNumber
       );
-      await toast.success("bạn đã đăng thành công");
+      toast.success("bạn đã đăng thành công");
       router.push("/login");
     } catch (error: any) {
       toast.warning(error.message);
@@ -171,3 +171,4 @@ const RegisterPage = () => {
 };
 
 export default RegisterPage;
+

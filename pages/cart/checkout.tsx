@@ -39,7 +39,7 @@ const CheckoutPage = () => {
       toast.error("Bạn cần đăng nhập để thanh toán");
     } else {
       try {
-        const res = await OrderProductApi(
+        await OrderProductApi(
           data.name,
           userId,
           data.address,
@@ -232,3 +232,4 @@ const CheckoutPage = () => {
 };
 
 export default CheckoutPage;
+

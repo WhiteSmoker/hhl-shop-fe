@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
-import Layout from "../../layouts/Main";
-import Image from "next/image";
 import Footer from "components/footer";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { getNewsIdApi } from "utils/data/news";
+import Layout from "../../layouts/Main";
 const New = () => {
   const [news, setNew] = useState<any>([]);
   const [img, setImg] = useState<string>("");

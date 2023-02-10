@@ -1,26 +1,23 @@
-import { GetServerSideProps } from "next";
-
 import { useEffect, useState } from "react";
-import Footer from "../../components/footer";
-import Layout from "../../layouts/Main";
 import Breadcrumb from "../../components/breadcrumb";
-import ProductsFeatured from "../../components/products-featured";
-import Gallery from "../../components/product-single/gallery";
+import Footer from "../../components/footer";
 import Content from "../../components/product-single/content";
 import Description from "../../components/product-single/description";
+import Gallery from "../../components/product-single/gallery";
 import Reviews from "../../components/product-single/reviews";
+import ProductsFeatured from "../../components/products-featured";
+import Layout from "../../layouts/Main";
 // import { server } from "../../utils/server";
 // types
-import { ProductType } from "types";
-import { getproductAPI, getproductIdApi } from "utils/data/products";
+import { getproductIdApi } from "utils/data/products";
 
 import { useRouter } from "next/router";
-type ProductPageType = {
-  product: ProductType;
-};
+// type ProductPageType = {
+//   product: ProductType;
+// };
 
 const Product = ({}) => {
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState<any>([]);
   const [showBlock, setShowBlock] = useState("description");
   const router = useRouter();
   const id = router.query.pid;
@@ -91,3 +88,4 @@ const Product = ({}) => {
 };
 
 export default Product;
+

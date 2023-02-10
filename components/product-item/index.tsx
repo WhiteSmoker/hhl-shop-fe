@@ -1,9 +1,8 @@
-import Link from "next/link";
 import { some } from "lodash";
+import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleFavProduct } from "store/reducers/user";
 import { RootState } from "store";
-import { ProductTypeList } from "types";
+import { toggleFavProduct } from "store/reducers/user";
 
 const ProductItem = ({
   // discount,
@@ -12,12 +11,10 @@ const ProductItem = ({
   // name,
   // price,
   // currentPrice,
-  categoryId,
   images,
   id,
   name,
   price,
-  quantity,
 }: any) => {
   const dispatch = useDispatch();
   const { favProducts } = useSelector((state: RootState) => state.user);
@@ -63,3 +60,4 @@ const ProductItem = ({
 };
 
 export default ProductItem;
+

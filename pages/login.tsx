@@ -1,14 +1,13 @@
-import Layout from "../layouts/Main";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
+import Layout from "../layouts/Main";
 
 import { useRouter } from "next/router";
 
-import FacebookSign from "../components/auth/facebook";
-import { useDispatch, useSelector } from "react-redux";
-import { loginAPI } from "utils/data/auth/LoginApi";
+import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { SetUser } from "store/reducers/user";
+import { loginAPI } from "utils/data/auth/LoginApi";
 
 type LoginMail = {
   username: string;
@@ -135,3 +134,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
